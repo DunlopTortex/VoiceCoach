@@ -1,0 +1,10 @@
+{
+  "name": "voice-coach",
+  "private": true,
+  "type": "module",
+  "description": "Voice training web app: assessment, games and guided exercises",
+  "scripts": {
+    "start": "python3 -m http.server 4466",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

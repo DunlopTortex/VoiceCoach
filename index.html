@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Voice Coach</title>
+  <meta name="description" content="Assess your voice, then train pitch, breath and range with guided exercises and games.">
+  <meta name="theme-color" content="#6d5dfc">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main id="view" class="view"></main>
+  <nav id="tabs" class="tabs" aria-label="Main">
+    <a href="#/home" data-tab="home"><span aria-hidden="true">🏠</span>Home</a>
+    <a href="#/exercises" data-tab="exercises"><span aria-hidden="true">🎵</span>Exercises</a>
+    <a href="#/progress" data-tab="progress"><span aria-hidden="true">📈</span>Progress</a>
+    <a href="#/settings" data-tab="settings"><span aria-hidden="true">⚙️</span>Settings</a>
+  </nav>
+  <noscript>Voice Coach needs JavaScript to listen to your voice.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
