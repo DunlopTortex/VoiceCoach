@@ -56,13 +56,24 @@ Browsers only allow the microphone on `https://` or `localhost`, so serve the fo
 
 ```bash
 cd voice-coach
-npm start                 # same as: python3 -m http.server 8080
-# open http://localhost:8080
+npm start                 # same as: python3 -m http.server 4466
+# open http://localhost:4466
 ```
 
 To use it on a phone, host the folder on any static HTTPS host (GitHub Pages, Netlify, …), open it,
 and choose **Add to Home Screen**. **Headphones are recommended** so the app's reference notes don't
 reach the microphone. The app also mutes the microphone while it plays them.
+
+## Deployment
+
+Every push to `main` runs the tests, then publishes the app to GitHub Pages at
+**https://dunloptortex.github.io/VoiceCoach/** (`.github/workflows/deploy.yml`). Pull requests run
+the tests only. The app's files are published as they are; the tests, README and `package.json` stay out.
+
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+The app caches itself for offline use, so after a deploy the first visit still shows the old version;
+reload once more to get the new one.
 
 ## How it works
 

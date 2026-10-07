@@ -1,7 +1,7 @@
 // End-to-end check in a real browser. The microphone is replaced by a "virtual singer":
 // an oscillator the test controls, so every part of the audio pipeline runs for real.
 //
-//   npm start            (serves the app on :8080, in another terminal)
+//   npm start            (serves the app on :4466, in another terminal)
 //   node tests/e2e.mjs   (needs Playwright; SCREENSHOTS=dir to save screenshots)
 
 import { createRequire } from 'node:module';
@@ -9,7 +9,7 @@ const require = createRequire(import.meta.url);
 let chromium;
 try { ({ chromium } = require('playwright')); } catch { ({ chromium } = require('/opt/node22/lib/node_modules/playwright')); }
 
-const BASE = process.env.BASE_URL || 'http://localhost:8080/';
+const BASE = process.env.BASE_URL || 'http://localhost:4466/';
 const SHOTS = process.env.SCREENSHOTS;
 const NOTE = { C: 0, 'C#': 1, D: 2, 'D#': 3, E: 4, F: 5, 'F#': 6, G: 7, 'G#': 8, A: 9, 'A#': 10, B: 11 };
 const noteToMidi = (name) => { const m = name.match(/^([A-G]#?)(-?\d)$/); return NOTE[m[1]] + (Number(m[2]) + 1) * 12; };
